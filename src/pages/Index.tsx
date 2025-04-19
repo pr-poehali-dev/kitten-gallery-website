@@ -1,38 +1,26 @@
-import KittenGallery from "@/components/KittenGallery";
-import KittenPageHeader from "@/components/KittenPageHeader";
+import SpaceHeader from "@/components/SpaceHeader";
+import PlanetGallery from "@/components/PlanetGallery";
+import SpaceFacts from "@/components/SpaceFacts";
+import AstronautSection from "@/components/AstronautSection";
+import SpaceFooter from "@/components/SpaceFooter";
+import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <KittenPageHeader />
+    <div className="min-h-screen">
+      <SpaceHeader />
       
-      <div className="container mx-auto px-4">
-        <KittenGallery />
+      <main className="container mx-auto px-4">
+        <PlanetGallery />
         
-        <div className="py-10 text-center">
-          <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-            Почему котята так прекрасны?
-          </h2>
-          <div className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 space-y-3">
-            <p>
-              Котята не только милые и пушистые, но и обладают особой магией, которая делает их идеальными домашними питомцами.
-            </p>
-            <p>
-              Их любопытство, игривость и способность дарить тепло и уют никого не оставят равнодушным.
-            </p>
-            <p>
-              Исследования показывают, что общение с котятами помогает снизить уровень стресса и улучшить настроение.
-            </p>
-          </div>
-        </div>
-      </div>
+        <Separator className="my-16 bg-space-800/50" />
+        
+        <SpaceFacts />
+        
+        <AstronautSection />
+      </main>
       
-      <footer className="bg-pink-100 dark:bg-pink-900/30 py-6">
-        <div className="container mx-auto text-center text-gray-600 dark:text-gray-300">
-          <p>© 2023 Мир Милых Котят. Все права защищены.</p>
-          <p className="mt-2 text-sm">С любовью к котятам и их хозяевам ❤️</p>
-        </div>
-      </footer>
+      <SpaceFooter />
     </div>
   );
 };
